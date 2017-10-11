@@ -1,0 +1,11 @@
+D:\API.EPOCH.BACKEND\bin\Debug\netcoreapp2.0\API.EPOCH.BACKEND.deps.json
+D:\API.EPOCH.BACKEND\bin\Debug\netcoreapp2.0\API.EPOCH.BACKEND.runtimeconfig.json
+D:\API.EPOCH.BACKEND\bin\Debug\netcoreapp2.0\API.EPOCH.BACKEND.runtimeconfig.dev.json
+D:\API.EPOCH.BACKEND\bin\Debug\netcoreapp2.0\API.EPOCH.BACKEND.dll
+D:\API.EPOCH.BACKEND\bin\Debug\netcoreapp2.0\API.EPOCH.BACKEND.pdb
+D:\API.EPOCH.BACKEND\obj\Debug\netcoreapp2.0\API.EPOCH.BACKEND.csproj.CoreCompileInputs.cache
+D:\API.EPOCH.BACKEND\obj\Debug\netcoreapp2.0\API.EPOCH.BACKEND.AssemblyInfoInputs.cache
+D:\API.EPOCH.BACKEND\obj\Debug\netcoreapp2.0\API.EPOCH.BACKEND.AssemblyInfo.cs
+D:\API.EPOCH.BACKEND\obj\Debug\netcoreapp2.0\API.EPOCH.BACKEND.dll
+D:\API.EPOCH.BACKEND\obj\Debug\netcoreapp2.0\API.EPOCH.BACKEND.pdb
+D:\API.EPOCH.BACKEND\obj\Debug\netcoreapp2.0\API.EPOCH.BACKEND.csprojResolveAssemblyReference.cache
