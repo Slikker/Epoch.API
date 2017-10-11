@@ -1,8 +1,11 @@
 ﻿using System;
 using LinqToDB.Mapping;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.EPOCH.BACKEND
 {
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     // Base class for all classes
     public class BaseClass : IBaseClass
     {

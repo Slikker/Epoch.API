@@ -11,7 +11,9 @@ using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 using LinqToDB.Data;
 using LinqToDB.DataProvider.SqlServer;
-
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Text;
 
 namespace API.EPOCH.BACKEND
 {
@@ -30,6 +32,19 @@ namespace API.EPOCH.BACKEND
 
             services.AddTransient<IRepository<BaseClass>, Repository<BaseClass>>();
             services.AddTransient<IRepositoryAccount<Account>, RepositoryAccount<Account>>();
+
+            services.AddAuthentication()
+                .AddJwtBearer(cfg =>
+                {
+                    cfg.RequireHttpsMetadata = false;
+                    cfg.SaveToken = true;
+                    cfg.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        ValidIssuer = Configuration["Tokens:Issuer"],
+                        ValidAudience = Configuration["Tokens:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Tokens:Key"]))
+                    };
+                });
 
 
             services.AddMvc();
@@ -50,6 +65,8 @@ namespace API.EPOCH.BACKEND
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseAuthentication();
 
             app.UseSwagger();
             app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "Epoch Backend API V0.1"); });
